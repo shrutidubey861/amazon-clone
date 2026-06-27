@@ -90,7 +90,7 @@
   align-items: center;
 }
 .eng-logo {
-  background-image: url("english.png");
+  background-image: url("Images/english.png");
   background-size: cover;
   height: 21px;
   width: 17px;
@@ -112,11 +112,7 @@
   background-color: #0f1111;
   color: #cccccc;
 }
-/*.sign-in{
-             display: flex;
-            justify-content: center;
-            align-items: center;
-        }*/
+
 .hello {
   font-size: 0.85rem;
 }
@@ -167,7 +163,7 @@
   border: 0.5px solid white;
 }
 .main-panel {
-  background-image: url("amazonpic.jpg");
+  background-image: url("Images/amazonpic.jpg");
   background-size: cover;
   height: 350px;
   width: 100%;
@@ -210,17 +206,13 @@
     transform:translateY(-2px);
 }
 .box-image {
-  height: 300px;
-  padding: 20px 0px 15px;
-  background-size: cover;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  background-repeat: no-repeat;
+ 
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    display: block;
 }
-/*.box-content{
-            margin-left: 1rem;
-            margin-right: 1rem;
-        }*/
+
 .box-content a {
   color: #007185;
 }
@@ -394,14 +386,37 @@ button {
     }
 
     .shop-sec{
-       grid-template-columns: 1fr;
-       padding:10px;
+       display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding: 10px;
     }
 
     .box{
         width: 100%;
         margin: 0;
     }
+
+    .box-image{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 10px;
+        background: no-repeat;
+    }
+
+    .box-image img{
+        width: 100%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+    }
+
+    .box-content h2{
+        font-size: 20px;
+    }
+    .box-content p{
+        font-size: 14px;
+    }
+
 
     .foot-panel2{
         flex-wrap: wrap;
